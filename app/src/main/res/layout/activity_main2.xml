@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_light_red"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/boy_girl_image_view2"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/boy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/gender" />
+
+    <TextView
+        android:id="@+id/boy_girl_text_view"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boy_girl_image_view2" />
+
+    <TextView
+        android:id="@+id/message_text_view"
+        style="@style/textStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boy_girl_text_view"
+        tools:text="this is me sorry for what happened yesterday" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_a_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/background_radio_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/background_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/red_radio_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/red_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light_red"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/blue_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/light_blue"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/green_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light_green"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/background_radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.75"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        android:contentDescription="@string/send" />
+
+    <ImageButton
+        android:id="@+id/share_image_button_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/message_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/message_text_view"
+        android:tint="@android:color/black"
+        android:padding="8dp"
+        android:onClick="shareMessage"
+        android:background="@color/light_light_red"
+        app:srcCompat="@android:drawable/ic_menu_share"
+        android:contentDescription="@string/share" />
+</androidx.constraintlayout.widget.ConstraintLayout>

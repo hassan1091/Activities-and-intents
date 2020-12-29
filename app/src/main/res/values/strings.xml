@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Activities and intents</string>
+    <string name="enter_message">Enter message</string>
+    <string name="boy">boy</string>
+    <string name="girl">girl</string>
+    <string name="send">Send</string>
+    <string name="choose_a_color">choose a color to main activity background</string>
+    <string name="light_red">light red</string>
+    <string name="light_blue">light blue</string>
+    <string name="light_green">light green</string>
+    <string name="share">Share</string>
+    <string name="gender">gender</string>
 </resources>
