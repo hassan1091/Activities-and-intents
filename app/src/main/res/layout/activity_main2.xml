@@ -89,8 +89,8 @@
             android:textSize="20sp" />
     </RadioGroup>
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/send_image_button_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="reply"
@@ -99,6 +99,8 @@
         app:layout_constraintStart_toEndOf="@+id/background_radio_group"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.75"
+        android:background="@color/light_light_red"
+        android:padding="8dp"
         app:srcCompat="@android:drawable/ic_menu_send"
         android:contentDescription="@string/send" />
 

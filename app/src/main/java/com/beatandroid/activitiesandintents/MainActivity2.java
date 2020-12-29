@@ -16,7 +16,7 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
     private ConstraintLayout mConstraintLayout;
     private ImageView mBoyGirlImageView;
     private TextView mBoyGirlTextView, mMessageTextView;
-    private ImageButton shareImageButton;
+    private ImageButton shareImageButton , sendImageButton;
     private RadioGroup mRadioGroup;
 
     private int colorPlace = 0;
@@ -71,6 +71,7 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
         mMessageTextView = findViewById(R.id.message_text_view);
         mRadioGroup = findViewById(R.id.background_radio_group);
         shareImageButton = findViewById(R.id.share_image_button_view);
+        sendImageButton = findViewById(R.id.send_image_button_view);
     }
 
     private void displayData() {
@@ -97,20 +98,22 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
         switch (checkedId) {
             case R.id.red_radio_button:
                 colorPlace = R.color.light_light_red;
-                mConstraintLayout.setBackgroundResource(colorPlace);
-                shareImageButton.setBackgroundResource(colorPlace);
+                changeColor(colorPlace);
                 break;
             case R.id.blue_radio_button:
                 colorPlace = R.color.light_light_blue;
-                mConstraintLayout.setBackgroundResource(colorPlace);
-                shareImageButton.setBackgroundResource(colorPlace);
+                changeColor(colorPlace);
                 break;
             case R.id.green_radio_button:
                 colorPlace = R.color.light_light_green;
-                mConstraintLayout.setBackgroundResource(colorPlace);
-                shareImageButton.setBackgroundResource(colorPlace);
+                changeColor(colorPlace);
                 break;
         }
+    }
+    private void changeColor(int color){
+        mConstraintLayout.setBackgroundResource(color);
+        shareImageButton.setBackgroundResource(color);
+        sendImageButton.setBackgroundResource(color);
     }
 
     public void shareMessage(View view) {
