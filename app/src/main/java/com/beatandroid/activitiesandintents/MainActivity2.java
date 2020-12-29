@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -29,6 +30,38 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
         //
         displayData();
         mRadioGroup.setOnCheckedChangeListener(this);
+        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this, "onRestart", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT).show();
     }
 
     private void getViews() {
@@ -83,7 +116,7 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
     public void shareMessage(View view) {
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_TEXT, mBoyGirlTextView.getText());
+        shareIntent.putExtra(Intent.EXTRA_TEXT, mMessageTextView.getText());
         shareIntent.setType("text/plain");
         startActivity(Intent.createChooser(shareIntent, getString(R.string.share)));
     }
