@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
     private ImageButton shareImageButton , sendImageButton;
     private RadioGroup mRadioGroup;
 
-    private int colorPlace = 0;
+    private int color = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +88,7 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
 
     public void reply(View view) {
         Intent intent = new Intent();
-        intent.putExtra(ExtraKeys.COLOR, colorPlace);
+        intent.putExtra(ExtraKeys.COLOR, color);
         setResult(RESULT_OK, intent);
         finish();
     }
@@ -97,16 +97,16 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId) {
             case R.id.red_radio_button:
-                colorPlace = R.color.light_light_red;
-                changeColor(colorPlace);
+                color = R.color.light_light_red;
+                changeColor(color);
                 break;
             case R.id.blue_radio_button:
-                colorPlace = R.color.light_light_blue;
-                changeColor(colorPlace);
+                color = R.color.light_light_blue;
+                changeColor(color);
                 break;
             case R.id.green_radio_button:
-                colorPlace = R.color.light_light_green;
-                changeColor(colorPlace);
+                color = R.color.light_light_green;
+                changeColor(color);
                 break;
         }
     }
