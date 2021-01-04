@@ -29,6 +29,7 @@
         android:layout_marginEnd="32dp"
         android:background="@android:color/holo_blue_light"
         android:hint="@string/enter_message"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:padding="4dp"
         android:textColor="@android:color/black"
@@ -36,19 +37,18 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/boy_girl_image_view"
         android:layout_width="0dp"
         android:layout_height="300dp"
+        android:contentDescription="@string/gender"
         android:scaleType="fitCenter"
         android:src="@drawable/boy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/gender" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/gender_radio_group"
@@ -80,11 +80,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/send"
-        android:onClick="send"
         android:backgroundTint="@android:color/holo_blue_light"
+        android:onClick="send"
+        android:text="@string/send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/gender_radio_group"
         app:layout_constraintStart_toStartOf="@+id/gender_radio_group"
         app:layout_constraintTop_toBottomOf="@+id/gender_radio_group" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,6 +29,12 @@ public class MainActivity2 extends AppCompatActivity implements RadioGroup.OnChe
         getViews();
         //
         displayData();
+        /*
+        *
+        *
+        *
+        *
+        * */
         mRadioGroup.setOnCheckedChangeListener(this);
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
     }
